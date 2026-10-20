@@ -43,3 +43,7 @@ app.post('/biodata', (req, res) => {
     .then(result => res.json(result.rows[0]))
     .catch(err => console.error(err));
 });
+
+app.put('/biodata/:id', (req, res) => {
+    const {id} = req.params;
+    const { nama, nim, kelas } = req.body;
